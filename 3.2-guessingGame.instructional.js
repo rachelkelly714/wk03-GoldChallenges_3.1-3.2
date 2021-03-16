@@ -19,3 +19,21 @@
 //? not required:  If you liked to style it, feel free to add a stylesheet to your HTML.
 
 //NOTE: Write your code below and push back to your github branch.  SUBMIT YOUR GITHUB URL IN CANVAS
+
+
+
+
+const randomNumber = Math.floor(Math.random() * 10) + 1
+console.log('Random Number', randomNumber)
+
+function checkGuess() {
+    let myGuess = guess.value
+    if (myGuess == randomNumber) {
+       alert("Your guess was" + myGuess +  ". Are you a mind reader? Nice!");
+    } else if (myGuess > randomNumber) {
+        alert("Your guess was"  +   myGuess  +  ". Maybe don't start a psychic network just yet...give it another shot!");
+    } else if(myGuess < randomNumber) {
+        alert("Your guess was"  +  myGuess  + ". Maybe don't start a psychic network just yet...try again");
+    }
+    }
+enterSubmit.addEventListener('click' , checkGuess)

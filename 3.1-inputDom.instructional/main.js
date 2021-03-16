@@ -10,3 +10,16 @@
 */
 
 //NOTE: Write your code below and push back to your github branch.  SUBMIT YOUR GITHUB URL IN CANVAS
+
+
+document.querySelector('form.form').addEventListener('Submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const entries = formData.entries();
+
+for (let input of entries)
+{
+    console.log( $((`You shopped at`) input[0] + (`for`) input[1] + input[2]));
+}
+
+}); 
